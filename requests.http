@@ -12,6 +12,15 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### session create/login
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
 ### get all products
 GET http://localhost:3000/products
 
