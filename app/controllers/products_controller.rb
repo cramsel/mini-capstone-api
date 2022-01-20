@@ -16,8 +16,12 @@ class ProductsController < ApplicationController
       supplier_id: params[:supplier_id],
       quantity: params[:quantity],
     )
-    render json: product
-    #validators make an if statement go here
+
+    if product.save
+      render json: product
+    else
+      render json: { errors: product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -27,8 +31,11 @@ class ProductsController < ApplicationController
     product.description = params[:description] || product.description
     product.supplier_id = params[:supplier_id] || product.supplier_id
     product.quantity = params[:quantity] || product.quantity
-    #validators make the render an if statement "if product.save..."
-    render json: product
+    if product.save
+      render json: product
+    else
+      render json: { errors: product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
