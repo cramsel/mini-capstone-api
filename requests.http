@@ -1,3 +1,17 @@
+### see all users
+GET http://localhost:3000/users
+
+### create user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "test",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
 ### get all products
 GET http://localhost:3000/products
 
