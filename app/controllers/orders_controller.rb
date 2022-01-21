@@ -9,13 +9,14 @@ class OrdersController < ApplicationController
   end
 
   def create
+    product = Product.find_by(id: params[:product_id])
     order = Order.create(
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      subtotal: params[:quantity] * Product.find_by(id: params[:product_id]).price,
-      tax: params[:tax],
-      total: params[:total],
+      subtotal: params[:quantity] * product.price,
+      tax: product.tax * params[:quantity],
+      total: (product.tax * params[:quantity]) + (product.price * params[:quantity]),
     )
 
     if order.save
