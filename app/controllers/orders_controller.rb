@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
+
   def index
     #order_list = Order.where(user_id: current_user.id)
     order_list = current_user.orders
