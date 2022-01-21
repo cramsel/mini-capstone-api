@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   def index
-    render json: Order.all
+    order_list = Order.where(user_id: current_user.id)
+    render json: order_list
   end
 
   def show
