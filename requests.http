@@ -60,7 +60,8 @@ GET http://localhost:3000/orders
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDI4MTcxNTh9.r97qeYmx3vOupfyRISkk7yrbRmdDhPAdYN4VRGLbr7Q
 
 ### show order
-GET http://localhost:3000/orders/1
+GET http://localhost:3000/orders/17
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDI4MTcxNTh9.r97qeYmx3vOupfyRISkk7yrbRmdDhPAdYN4VRGLbr7Q
 
 ### create order
 POST http://localhost:3000/orders
