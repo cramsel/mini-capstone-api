@@ -51,6 +51,9 @@ Content-Type: application/json
 ### delete product
 DELETE http://localhost:3000/products/6
 
+### get all orders
+GET http://localhost:3000/orders
+
 ### create order
 POST http://localhost:3000/orders
 Content-Type: application/json
