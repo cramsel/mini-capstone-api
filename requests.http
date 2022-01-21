@@ -63,10 +63,10 @@ GET http://localhost:3000/orders/1
 
 ### create order
 POST http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDI4MTQ2MjZ9.Q4O0C0-UwZR0WVFP44TKKBkt-MfaPkQJhoWwUh3CQt0
 Content-Type: application/json
 
 {
-  "user_id": 1,
   "product_id": 1,
   "quantity": 1,
   "subtotal": 1,
