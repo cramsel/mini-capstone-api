@@ -21,6 +21,8 @@ Content-Type: application/json
   "password": "password"
 }
 
+
+
 ### get all products
 GET http://localhost:3000/products
 
@@ -51,8 +53,13 @@ Content-Type: application/json
 ### delete product
 DELETE http://localhost:3000/products/6
 
+
+
 ### get all orders
 GET http://localhost:3000/orders
+
+### show order
+GET http://localhost:3000/orders/1
 
 ### create order
 POST http://localhost:3000/orders

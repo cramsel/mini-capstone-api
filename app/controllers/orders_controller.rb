@@ -3,6 +3,11 @@ class OrdersController < ApplicationController
     render json: Order.all
   end
 
+  def show
+    order = Order.find_by(id: params[:id])
+    render json: order
+  end
+
   def create
     order = Order.create(
       user_id: params[:user_id],
