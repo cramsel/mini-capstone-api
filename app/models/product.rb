@@ -11,6 +11,7 @@ class Product < ApplicationRecord
 
   belongs_to :supplier
   has_many :images
+  has_many :orders
 
   def is_discounted?
     if price < 50 #none of my items are less than 10 lol
