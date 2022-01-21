@@ -50,3 +50,16 @@ Content-Type: application/json
 
 ### delete product
 DELETE http://localhost:3000/products/6
+
+### create order
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 1,
+  "quantity": 1,
+  "subtotal": 1,
+  "tax": 0,
+  "total": 1
+}
