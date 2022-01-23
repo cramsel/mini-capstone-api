@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMwMzYxMzh9.I_IKVgHHxlVLlSBTIT6VevSl68zCCDiLHwQxQYinQz0
+
 ### see all users
 GET http://localhost:3000/users
 
@@ -57,15 +59,15 @@ DELETE http://localhost:3000/products/6
 
 ### get all orders
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDI4MTcxNTh9.r97qeYmx3vOupfyRISkk7yrbRmdDhPAdYN4VRGLbr7Q
+Authorization: Bearer {{jwt}}
 
 ### show order
 GET http://localhost:3000/orders/17
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDI4MTcxNTh9.r97qeYmx3vOupfyRISkk7yrbRmdDhPAdYN4VRGLbr7Q
+Authorization: Bearer {{jwt}}
 
 ### create order
 POST http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDI4MTcxNTh9.r97qeYmx3vOupfyRISkk7yrbRmdDhPAdYN4VRGLbr7Q
+Authorization: Bearer {{jwt}}
 #Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDI4MTY4NDd9.vU_t1H4bOEo6OvNPsCXqcQnBxzkqannD-7Z6fg2sM_E
 Content-Type: application/json
 
