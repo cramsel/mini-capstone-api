@@ -82,7 +82,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "product_id": 2,
+  "product_id": 1,
   "quantity": 2,
   "order_id": null,
   "status": "carted"

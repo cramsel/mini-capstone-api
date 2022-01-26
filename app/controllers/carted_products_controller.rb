@@ -10,10 +10,10 @@ class CartedProductsController < ApplicationController
       order_id: params[:order_id],
       status: params[:status],
     )
-    # if order.save
-    render json: cart_item
-    # else
-    #   render json: { errors: order.errors.full_messages }, status: :unprocessable_entity
-    # end
+    if cart_item.save
+      render json: cart_item
+    else
+      render json: { errors: cart_item.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 end
