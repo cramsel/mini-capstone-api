@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyNTEzMDR9.kLSelvuFmtnnuBAltS3BxeSj8foE_lDlZpIIPzQVaEM
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyNTIwNzN9.9SnWvR3mmwgOekUBUIizXHiw2EMLN0YzLt_xug6Irao
 
 ### see all users
 GET http://localhost:3000/users
@@ -75,6 +75,11 @@ Content-Type: application/json
   "product_id": 2,
   "quantity": 3
 }
+
+
+### get all cart items
+GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
 
 ### create cart item
 POST http://localhost:3000/carted_products

@@ -1,4 +1,11 @@
 class CartedProductsController < ApplicationController
+  before_action :authenticate_user
+
+  def index
+    user_cart = current_user.carted_products
+    render json: user_cart
+  end
+
   def create
     product = Product.find_by(id: params[:product_id])
     quantity = params[:quantity]
