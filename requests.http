@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMwMzYxMzh9.I_IKVgHHxlVLlSBTIT6VevSl68zCCDiLHwQxQYinQz0
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyNTAzMzF9.CF5WPDyxvprtVzVzk5u-YnTN-x0TxeD2WAs6t-0IQEU
 
 ### see all users
 GET http://localhost:3000/users
@@ -74,4 +74,16 @@ Content-Type: application/json
 {
   "product_id": 2,
   "quantity": 3
+}
+
+### create cart item
+POST http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "product_id": 2,
+  "quantity": 2,
+  "order_id": null,
+  "status": "carted"
 }
