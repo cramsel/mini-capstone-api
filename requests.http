@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyNTAzMzF9.CF5WPDyxvprtVzVzk5u-YnTN-x0TxeD2WAs6t-0IQEU
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyNTEzMDR9.kLSelvuFmtnnuBAltS3BxeSj8foE_lDlZpIIPzQVaEM
 
 ### see all users
 GET http://localhost:3000/users
@@ -83,7 +83,5 @@ Content-Type: application/json
 
 {
   "product_id": 1,
-  "quantity": 2,
-  "order_id": null,
-  "status": "carted"
+  "quantity": 2
 }

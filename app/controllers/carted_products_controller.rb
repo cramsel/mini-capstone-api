@@ -7,8 +7,8 @@ class CartedProductsController < ApplicationController
       user_id: current_user.id,
       product_id: product.id,
       quantity: quantity,
-      order_id: params[:order_id],
-      status: params[:status],
+      order_id: nil,
+      status: "carted",
     )
     if cart_item.save
       render json: cart_item
