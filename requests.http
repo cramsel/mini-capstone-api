@@ -67,13 +67,8 @@ Authorization: Bearer {{jwt}}
 
 ### create order
 POST http://localhost:3000/orders
-# Authorization: Bearer {{jwt}}
-# Content-Type: application/json
-
-# {
-#   "product_id": 2,
-#   "quantity": 3
-# }
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
 
 
 ### get all cart items
