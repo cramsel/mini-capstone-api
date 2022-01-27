@@ -1,3 +1,5 @@
 class OrderSerializer < ActiveModel::Serializer
-  attributes :user_id, :subtotal, :tax, :total
+  attributes :id, :subtotal, :tax, :total
+
+  has_many :carted_products
 end

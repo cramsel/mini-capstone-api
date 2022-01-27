@@ -4,13 +4,13 @@ class OrdersController < ApplicationController
   def index
     #order_list = Order.where(user_id: current_user.id)
     order_list = current_user.orders
-    render json: order_list
+    render json: order_list, include: "carted_products.product"
   end
 
   def show
     #order = Order.find_by(id: params[:id])
     order = current_user.orders.find_by(id: params[:id])
-    render json: order
+    render json: order, include: "carted_products.product"
   end
 
   def create
@@ -35,7 +35,7 @@ class OrdersController < ApplicationController
         carted_product.status = "purchased"
         carted_product.save
       end
-      render json: order
+      render json: order, include: "carted_products.product"
     else
       render json: { errors: order.errors.full_messages }, status: :unprocessable_entity
     end
