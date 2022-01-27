@@ -14,24 +14,28 @@ class OrdersController < ApplicationController
   end
 
   def create
-    product = Product.find_by(id: params[:product_id])
-    quantity = params[:quantity]
-    subtotal = product.price * quantity
-    tax = product.tax * quantity
-
     order = Order.create(
-      user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: quantity,
-      subtotal: subtotal,
-      tax: product.tax * quantity,
-      total: tax + subtotal,
-    )
+      user_id: params[:user_id],
 
-    if order.save
-      render json: order
-    else
-      render json: { errors: order.errors.full_messages }, status: :unprocessable_entity
-    end
+    )
+    # product = Product.find_by(id: params[:product_id])
+    # quantity = params[:quantity]
+    # subtotal = product.price * quantity
+    # tax = product.tax * quantity
+
+    # order = Order.create(
+    #   user_id: current_user.id,
+    #   product_id: params[:product_id],
+    #   quantity: quantity,
+    #   subtotal: subtotal,
+    #   tax: product.tax * quantity,
+    #   total: tax + subtotal,
+    # )
+
+    # if order.save
+    #   render json: order
+    # else
+    #   render json: { errors: order.errors.full_messages }, status: :unprocessable_entity
+
   end
 end
