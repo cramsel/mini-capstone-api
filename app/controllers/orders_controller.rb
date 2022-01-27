@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
 
   def index
     #order_list = Order.where(user_id: current_user.id)
-    order_list = current_user.orders
+    order_list = current_user.orders.includes(:user, :carted_products, :products)
     render json: order_list, include: "carted_products.product"
   end
 
