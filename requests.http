@@ -1,10 +1,10 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDU1NzU3MDF9.eunPjvijSWzmAVXtVCLuDJPv-Tk3lZwQGcmB5Vw01oU
-
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDU1Nzk3Njd9.gUGuUAWX4OpPIzUewmiVXu8Ac06pDVFo9ohdnj9tIVE
+@host = https://blooming-mesa-94898.herokuapp.com/
 ### see all users
-GET http://localhost:3000/users
+GET {{host}}users
 
 ### create user
-POST http://localhost:3000/users
+POST {{host}}users
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### session create/login
-POST http://localhost:3000/sessions
+POST {{host}}sessions
 Content-Type: application/json
 
 {
@@ -26,13 +26,13 @@ Content-Type: application/json
 
 
 ### get all products
-GET http://localhost:3000/products
+GET {{host}}products
 
 ### get 1 product
-GET http://localhost:3000/products/1
+GET {{host}}products/1
 
 ### create product
-POST http://localhost:3000/products
+POST {{host}}products
 Content-Type: application/json
 
 {
@@ -44,7 +44,7 @@ Content-Type: application/json
 }
 
 ### update product
-PATCH http://localhost:3000/products/7
+PATCH {{host}}products/4
 Content-Type: application/json
 
 {
@@ -53,30 +53,30 @@ Content-Type: application/json
 }
 
 ### delete product
-DELETE http://localhost:3000/products/7
+DELETE {{host}}products/4
 
 
 
 ### get all orders
-GET http://localhost:3000/orders
+GET {{host}}orders
 Authorization: Bearer {{jwt}}
 
 ### show order
-GET http://localhost:3000/orders/26
+GET {{host}}orders/26
 Authorization: Bearer {{jwt}}
 
 ### create order
-POST http://localhost:3000/orders
+POST {{host}}orders
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 
 ### get all cart items
-GET http://localhost:3000/carted_products
+GET {{host}}carted_products
 Authorization: Bearer {{jwt}}
 
 ### create cart item
-POST http://localhost:3000/carted_products
+POST {{host}}carted_products
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
@@ -86,5 +86,5 @@ Content-Type: application/json
 }
 
 ### delete cart item
-DELETE http://localhost:3000/carted_products/10
+DELETE {{host}}carted_products/1
 Authorization: Bearer {{jwt}}
