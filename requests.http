@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDMzMzUxNTN9.ywCoKZ6YYoBuvJZM9yO7hwR5KSZ_UKnygyGuoIbIuWc
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDU1NzU3MDF9.eunPjvijSWzmAVXtVCLuDJPv-Tk3lZwQGcmB5Vw01oU
 
 ### see all users
 GET http://localhost:3000/users
@@ -8,8 +8,8 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "test!",
-  "email": "test1@test.com",
+  "name": "test!!",
+  "email": "test11@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -19,7 +19,7 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "test11@test.com",
   "password": "password"
 }
 
@@ -38,22 +38,22 @@ Content-Type: application/json
 {
   "name": "test",
   "price": 1,
-  "description": "test",
+  "description": "test!",
   "supplier_id": 1,
   "quantity": 1
 }
 
 ### update product
-PATCH http://localhost:3000/products/1
+PATCH http://localhost:3000/products/7
 Content-Type: application/json
 
 {
-  "price": 1,
+  "price": 100,
   "quantity": 2
 }
 
 ### delete product
-DELETE http://localhost:3000/products/6
+DELETE http://localhost:3000/products/7
 
 
 
@@ -62,7 +62,7 @@ GET http://localhost:3000/orders
 Authorization: Bearer {{jwt}}
 
 ### show order
-GET http://localhost:3000/orders/17
+GET http://localhost:3000/orders/26
 Authorization: Bearer {{jwt}}
 
 ### create order
